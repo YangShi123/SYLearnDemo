@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EBF4AE84D55684511091403 /* libPods-SYLearnDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */; };
 		80D1F38E228570A200E2755D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F38D228570A200E2755D /* AppDelegate.m */; };
 		80D1F391228570A200E2755D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F390228570A200E2755D /* ViewController.m */; };
 		80D1F394228570A200E2755D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D1F392228570A200E2755D /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLearnDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D1F389228570A200E2755D /* SYLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D1F38C228570A200E2755D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80D1F38D228570A200E2755D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		80D1F398228570A300E2755D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80D1F39A228570A300E2755D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D1F39B228570A300E2755D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		912BDDE1809C542088E2A6EB /* Pods-SYLearnDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLearnDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C1647DD13385CB0F822EB974 /* Pods-SYLearnDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLearnDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EBF4AE84D55684511091403 /* libPods-SYLearnDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DFCFAF3002F429F351A7FAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1647DD13385CB0F822EB974 /* Pods-SYLearnDemo.debug.xcconfig */,
+				912BDDE1809C542088E2A6EB /* Pods-SYLearnDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		80D1F380228570A200E2755D = {
 			isa = PBXGroup;
 			children = (
 				80D1F38B228570A200E2755D /* SYLearnDemo */,
 				80D1F38A228570A200E2755D /* Products */,
+				5DFCFAF3002F429F351A7FAE /* Pods */,
+				C7AB2BE526BC9C64E35E2CB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = SYLearnDemo;
 			sourceTree = "<group>";
 		};
+		C7AB2BE526BC9C64E35E2CB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80D1F39F228570A300E2755D /* Build configuration list for PBXNativeTarget "SYLearnDemo" */;
 			buildPhases = (
+				473B6E339E2251C13BD64B29 /* [CP] Check Pods Manifest.lock */,
 				80D1F385228570A200E2755D /* Sources */,
 				80D1F386228570A200E2755D /* Frameworks */,
 				80D1F387228570A200E2755D /* Resources */,
+				F848812DBEF0888E7402A222 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +123,7 @@
 		80D1F381228570A200E2755D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SY;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "石阳";
 				TargetAttributes = {
@@ -135,6 +162,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		473B6E339E2251C13BD64B29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SYLearnDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F848812DBEF0888E7402A222 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80D1F385228570A200E2755D /* Sources */ = {
@@ -283,11 +351,13 @@
 		};
 		80D1F3A0228570A300E2755D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1647DD13385CB0F822EB974 /* Pods-SYLearnDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84JYD9X959;
 				INFOPLIST_FILE = SYLearnDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +370,13 @@
 		};
 		80D1F3A1228570A300E2755D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 912BDDE1809C542088E2A6EB /* Pods-SYLearnDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84JYD9X959;
 				INFOPLIST_FILE = SYLearnDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
