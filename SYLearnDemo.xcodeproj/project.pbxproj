@@ -14,6 +14,9 @@
 		80D1F396228570A300E2755D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D1F395228570A300E2755D /* Assets.xcassets */; };
 		80D1F399228570A300E2755D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D1F397228570A300E2755D /* LaunchScreen.storyboard */; };
 		80D1F39C228570A300E2755D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F39B228570A300E2755D /* main.m */; };
+		831488CB2285B05100C0555D /* SYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831488CA2285B05100C0555D /* SYTabBarController.m */; };
+		831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831488CD2285B1D500C0555D /* SYMainViewController.m */; };
+		831488D12285B1E200C0555D /* SYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831488D02285B1E200C0555D /* SYMineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		80D1F398228570A300E2755D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80D1F39A228570A300E2755D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D1F39B228570A300E2755D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		831488C92285B05100C0555D /* SYTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYTabBarController.h; sourceTree = "<group>"; };
+		831488CA2285B05100C0555D /* SYTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYTabBarController.m; sourceTree = "<group>"; };
+		831488CC2285B1D500C0555D /* SYMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMainViewController.h; sourceTree = "<group>"; };
+		831488CD2285B1D500C0555D /* SYMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainViewController.m; sourceTree = "<group>"; };
+		831488CF2285B1E200C0555D /* SYMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMineViewController.h; sourceTree = "<group>"; };
+		831488D02285B1E200C0555D /* SYMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMineViewController.m; sourceTree = "<group>"; };
 		912BDDE1809C542088E2A6EB /* Pods-SYLearnDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLearnDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C1647DD13385CB0F822EB974 /* Pods-SYLearnDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLearnDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,8 +83,9 @@
 		80D1F38B228570A200E2755D /* SYLearnDemo */ = {
 			isa = PBXGroup;
 			children = (
-				80D1F38C228570A200E2755D /* AppDelegate.h */,
-				80D1F38D228570A200E2755D /* AppDelegate.m */,
+				831488C52285AEF000C0555D /* Launch */,
+				831488C72285AF6200C0555D /* 首页 */,
+				831488C82285AF7400C0555D /* 我的 */,
 				80D1F38F228570A200E2755D /* ViewController.h */,
 				80D1F390228570A200E2755D /* ViewController.m */,
 				80D1F392228570A200E2755D /* Main.storyboard */,
@@ -85,6 +95,35 @@
 				80D1F39B228570A300E2755D /* main.m */,
 			);
 			path = SYLearnDemo;
+			sourceTree = "<group>";
+		};
+		831488C52285AEF000C0555D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				80D1F38C228570A200E2755D /* AppDelegate.h */,
+				80D1F38D228570A200E2755D /* AppDelegate.m */,
+				831488C92285B05100C0555D /* SYTabBarController.h */,
+				831488CA2285B05100C0555D /* SYTabBarController.m */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		831488C72285AF6200C0555D /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				831488CC2285B1D500C0555D /* SYMainViewController.h */,
+				831488CD2285B1D500C0555D /* SYMainViewController.m */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		831488C82285AF7400C0555D /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				831488CF2285B1E200C0555D /* SYMineViewController.h */,
+				831488D02285B1E200C0555D /* SYMineViewController.m */,
+			);
+			path = "我的";
 			sourceTree = "<group>";
 		};
 		C7AB2BE526BC9C64E35E2CB8 /* Frameworks */ = {
@@ -210,8 +249,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D1F391228570A200E2755D /* ViewController.m in Sources */,
+				831488D12285B1E200C0555D /* SYMineViewController.m in Sources */,
+				831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */,
 				80D1F39C228570A300E2755D /* main.m in Sources */,
 				80D1F38E228570A200E2755D /* AppDelegate.m in Sources */,
+				831488CB2285B05100C0555D /* SYTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
