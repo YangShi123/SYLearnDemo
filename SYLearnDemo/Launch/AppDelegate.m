@@ -22,6 +22,7 @@
     SYTabBarController * tabBarController = [[SYTabBarController alloc] init];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

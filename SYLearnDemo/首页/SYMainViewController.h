@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SYMainViewController : UIViewController
+@interface SYMainViewController : SYSuperViewController
 
 @end
