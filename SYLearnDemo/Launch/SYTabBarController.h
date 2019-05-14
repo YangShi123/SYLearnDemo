@@ -6,8 +6,14 @@
 //  Copyright © 2019年 石阳. All rights reserved.
 //
 
-#import "CYLTabBarController.h"
- 
-@interface SYTabBarController : CYLTabBarController
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface SYTabBarController : UITabBarController
 
 @end
+
+NS_ASSUME_NONNULL_END
+ 
+

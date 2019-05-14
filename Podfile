@@ -7,7 +7,6 @@ target 'SYLearnDemo' do
 
   # Pods for SYLearnDemo
 
-pod 'CYLTabBarController'
 pod 'IQKeyboardManager'
 pod 'Masonry'
 pod 'AFNetworking'

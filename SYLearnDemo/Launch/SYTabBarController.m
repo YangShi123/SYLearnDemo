@@ -12,36 +12,38 @@
 
 @interface SYTabBarController ()
 
+@property (nonatomic, strong) NSMutableArray * tarBarItems;
+
 @end
 
 @implementation SYTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //设置tabbar的title 默认图片 选中图片
-    NSDictionary * mainDic = @{
-                               CYLTabBarItemTitle : @"首页",
-                               CYLTabBarItemImage : @"tabbar_首页",
-                               CYLTabBarItemSelectedImage : @"tabbar_首页_选中"
-                               };
-    NSDictionary * mineDic = @{
-                               CYLTabBarItemTitle : @"我的主页",
-                               CYLTabBarItemImage : @"tabbar_我的",
-                               CYLTabBarItemSelectedImage : @"tabbar_我的_选中"
-                               };
-    self.tabBarItemsAttributes = @[mainDic, mineDic];
     
-    //设置tabbar的title默认和选中颜色
-    UITabBarItem * tabBarItem = [UITabBarItem appearance];
-    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:COLOR_2c2c2c} forState:UIControlStateNormal];
-    [tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:COLOR_1296db} forState:UIControlStateSelected];
-    
-    //设置tabbar的控制器以及根控制器
-    SYMainViewController * mainVC = [[SYMainViewController alloc] init];
-    CYLBaseNavigationController * mainNavi = [[CYLBaseNavigationController alloc] initWithRootViewController:mainVC];
-    SYMineViewController * mineVC = [[SYMineViewController alloc] init];
-    CYLBaseNavigationController * mineNavi = [[CYLBaseNavigationController alloc] initWithRootViewController:mineVC];
-    self.viewControllers = @[mainNavi, mineNavi];
+    [self configTabBarWithViewController:[[SYMainViewController alloc] init] title:@"首页"];
+    [self configTabBarWithViewController:[[SYMineViewController alloc] init] title:@"我的"];
+    self.viewControllers = [self.tarBarItems copy];
+}
+
+- (void)configTabBarWithViewController:(UIViewController *)viewController title:(NSString *)title
+{
+    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navi.tabBarItem.title = title;
+    [navi.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:COLOR_2c2c2c} forState:UIControlStateNormal];
+    [navi.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:COLOR_1296db} forState:UIControlStateSelected];
+    [navi.tabBarItem setImage:[[UIImage imageNamed:[NSString stringWithFormat:@"tabbar_%@", title]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [navi.tabBarItem setSelectedImage:[[UIImage imageNamed:[NSString stringWithFormat:@"tabbar_%@_选中", title]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [self.tarBarItems addObject:navi];
+}
+
+- (NSMutableArray *)tarBarItems
+{
+    if (!_tarBarItems)
+    {
+        _tarBarItems = [NSMutableArray array];
+    }
+    return _tarBarItems;
 }
 
 - (void)didReceiveMemoryWarning {
