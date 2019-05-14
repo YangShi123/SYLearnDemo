@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SYSuperViewController : UIViewController
 
+- (void)_config;
+
+- (void)_setupUI;
+
+- (void)_loadData;
+
 @end
 
 NS_ASSUME_NONNULL_END

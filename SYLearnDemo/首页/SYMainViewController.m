@@ -8,7 +8,7 @@
 
 #import "SYMainViewController.h"
 
-@interface SYMainViewController ()
+@interface SYMainViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -16,22 +16,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self _setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self setNaviAlpha:0];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setNaviAlpha:(CGFloat)alpha
+{
+    for (UIView * view in self.navigationController.navigationBar.subviews)
+    {
+        if ([view isKindOfClass:NSClassFromString(@"_UIBarBackground")])
+        {
+            for (UIView * subView in view.subviews)
+            {
+                subView.alpha = alpha;
+//                if ([subView isKindOfClass:NSClassFromString(@"UIVisualEffectView")])
+//                {
+//                    subView.alpha = alpha;
+//                }
+            }
+        }
+    }
 }
-*/
+
+- (void)_setupUI
+{
+    UITableView * tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.view addSubview:tableView];
+}
+
+#pragma mark - UITableViewDelegate / UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    return cell;
+}
 
 @end

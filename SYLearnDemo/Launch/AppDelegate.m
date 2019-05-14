@@ -23,6 +23,13 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
+    //适配iOS11
+    if (@available(iOS 11.0, *)){
+        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+    }else{
+        
+    }
+    
     return YES;
 }
 
