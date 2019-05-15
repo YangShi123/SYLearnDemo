@@ -14,5 +14,7 @@ pod 'SDWebImage'
 pod 'MJRefresh'
 pod 'JXCategoryView'
 pod 'FDFullscreenPopGesture'
+pod 'TYCyclePagerView'
+pod 'MBProgressHUD'
 
 end

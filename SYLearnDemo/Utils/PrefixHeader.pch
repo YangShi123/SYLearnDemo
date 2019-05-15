@@ -16,6 +16,9 @@
 #import <Foundation/Foundation.h>
 #import "Define.h"
 #import "SYSuperViewController.h"
+#import "UIViewController+SYNavigationBar.h"
+#import "UIView+Extension.h"
+#import "SYProgressHUD.h"
 
 
 #endif

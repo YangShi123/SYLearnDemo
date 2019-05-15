@@ -30,6 +30,8 @@
         
     }
     
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    
     return YES;
 }
 

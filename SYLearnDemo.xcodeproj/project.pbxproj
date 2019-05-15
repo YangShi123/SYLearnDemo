@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6EBF4AE84D55684511091403 /* libPods-SYLearnDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */; };
+		8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */; };
+		8075A80A228BB22500B43693 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A808228BB22500B43693 /* UIView+Extension.m */; };
+		8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A80D228BC0E900B43693 /* SYExchangeViewController.m */; };
+		8075A814228BC2BA00B43693 /* SYMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A813228BC2BA00B43693 /* SYMainModel.m */; };
+		8075A817228BC2D000B43693 /* SYMainTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A816228BC2D000B43693 /* SYMainTableViewHelper.m */; };
+		8075A81A228BC2E300B43693 /* SYMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A819228BC2E300B43693 /* SYMainTableViewCell.m */; };
+		8075A823228C07A200B43693 /* SYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A822228C07A200B43693 /* SYProgressHUD.m */; };
 		80CFACD12289675900DF7C09 /* SYSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CFACD02289675900DF7C09 /* SYSuperViewController.m */; };
 		80D1F38E228570A200E2755D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F38D228570A200E2755D /* AppDelegate.m */; };
 		80D1F391228570A200E2755D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F390228570A200E2755D /* ViewController.m */; };
@@ -22,6 +29,20 @@
 
 /* Begin PBXFileReference section */
 		794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLearnDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8075A805228BB19800B43693 /* UIViewController+SYNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SYNavigationBar.h"; sourceTree = "<group>"; };
+		8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SYNavigationBar.m"; sourceTree = "<group>"; };
+		8075A808228BB22500B43693 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		8075A809228BB22500B43693 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8075A80C228BC0E900B43693 /* SYExchangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYExchangeViewController.h; sourceTree = "<group>"; };
+		8075A80D228BC0E900B43693 /* SYExchangeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYExchangeViewController.m; sourceTree = "<group>"; };
+		8075A812228BC2BA00B43693 /* SYMainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMainModel.h; sourceTree = "<group>"; };
+		8075A813228BC2BA00B43693 /* SYMainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainModel.m; sourceTree = "<group>"; };
+		8075A815228BC2D000B43693 /* SYMainTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMainTableViewHelper.h; sourceTree = "<group>"; };
+		8075A816228BC2D000B43693 /* SYMainTableViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainTableViewHelper.m; sourceTree = "<group>"; };
+		8075A818228BC2E300B43693 /* SYMainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMainTableViewCell.h; sourceTree = "<group>"; };
+		8075A819228BC2E300B43693 /* SYMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainTableViewCell.m; sourceTree = "<group>"; };
+		8075A821228C07A200B43693 /* SYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressHUD.h; sourceTree = "<group>"; };
+		8075A822228C07A200B43693 /* SYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressHUD.m; sourceTree = "<group>"; };
 		80CFACCF2289675900DF7C09 /* SYSuperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYSuperViewController.h; sourceTree = "<group>"; };
 		80CFACD02289675900DF7C09 /* SYSuperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYSuperViewController.m; sourceTree = "<group>"; };
 		80CFACD3228967F900DF7C09 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
@@ -67,6 +88,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8075A80B228BC0BE00B43693 /* 交流 */ = {
+			isa = PBXGroup;
+			children = (
+				8075A80C228BC0E900B43693 /* SYExchangeViewController.h */,
+				8075A80D228BC0E900B43693 /* SYExchangeViewController.m */,
+			);
+			path = "交流";
+			sourceTree = "<group>";
+		};
+		8075A80F228BC26A00B43693 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				8075A812228BC2BA00B43693 /* SYMainModel.h */,
+				8075A813228BC2BA00B43693 /* SYMainModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		8075A810228BC27F00B43693 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				8075A818228BC2E300B43693 /* SYMainTableViewCell.h */,
+				8075A819228BC2E300B43693 /* SYMainTableViewCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		8075A811228BC29500B43693 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				8075A815228BC2D000B43693 /* SYMainTableViewHelper.h */,
+				8075A816228BC2D000B43693 /* SYMainTableViewHelper.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
 		80CFACCE2289672800DF7C09 /* 父类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +138,12 @@
 			children = (
 				80CFACD42289680300DF7C09 /* PrefixHeader.pch */,
 				80CFACD3228967F900DF7C09 /* Define.h */,
+				8075A809228BB22500B43693 /* UIView+Extension.h */,
+				8075A808228BB22500B43693 /* UIView+Extension.m */,
+				8075A805228BB19800B43693 /* UIViewController+SYNavigationBar.h */,
+				8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */,
+				8075A821228C07A200B43693 /* SYProgressHUD.h */,
+				8075A822228C07A200B43693 /* SYProgressHUD.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -108,6 +171,7 @@
 			children = (
 				831488C52285AEF000C0555D /* Launch */,
 				831488C72285AF6200C0555D /* 首页 */,
+				8075A80B228BC0BE00B43693 /* 交流 */,
 				831488C82285AF7400C0555D /* 我的 */,
 				80CFACCE2289672800DF7C09 /* 父类 */,
 				80CFACD2228967DA00DF7C09 /* Utils */,
@@ -138,6 +202,9 @@
 			children = (
 				831488CC2285B1D500C0555D /* SYMainViewController.h */,
 				831488CD2285B1D500C0555D /* SYMainViewController.m */,
+				8075A80F228BC26A00B43693 /* M */,
+				8075A810228BC27F00B43693 /* V */,
+				8075A811228BC29500B43693 /* C */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -273,12 +340,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8075A80A228BB22500B43693 /* UIView+Extension.m in Sources */,
 				80D1F391228570A200E2755D /* ViewController.m in Sources */,
+				8075A81A228BC2E300B43693 /* SYMainTableViewCell.m in Sources */,
+				8075A814228BC2BA00B43693 /* SYMainModel.m in Sources */,
+				8075A823228C07A200B43693 /* SYProgressHUD.m in Sources */,
 				831488D12285B1E200C0555D /* SYMineViewController.m in Sources */,
+				8075A817228BC2D000B43693 /* SYMainTableViewHelper.m in Sources */,
 				831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */,
+				8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */,
 				80D1F39C228570A300E2755D /* main.m in Sources */,
 				80CFACD12289675900DF7C09 /* SYSuperViewController.m in Sources */,
 				80D1F38E228570A200E2755D /* AppDelegate.m in Sources */,
+				8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */,
 				831488CB2285B05100C0555D /* SYTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

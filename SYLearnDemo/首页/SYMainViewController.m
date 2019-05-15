@@ -7,8 +7,11 @@
 //
 
 #import "SYMainViewController.h"
+#import "SYMainTableViewHelper.h"
 
-@interface SYMainViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface SYMainViewController ()
+
+@property (nonatomic, strong) SYMainTableViewHelper * tableViewHelper;
 
 @end
 
@@ -18,6 +21,7 @@
     [super viewDidLoad];
     
     [self _setupUI];
+    [self _loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -25,6 +29,12 @@
     [super viewWillAppear:animated];
 //    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [self setNaviAlpha:0];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self setNaviAlpha:1];
 }
 
 - (void)setNaviAlpha:(CGFloat)alpha
@@ -35,11 +45,10 @@
         {
             for (UIView * subView in view.subviews)
             {
-                subView.alpha = alpha;
-//                if ([subView isKindOfClass:NSClassFromString(@"UIVisualEffectView")])
-//                {
-//                    subView.alpha = alpha;
-//                }
+                if ([subView isKindOfClass:NSClassFromString(@"UIVisualEffectView")])
+                {
+                    subView.alpha = alpha;
+                }
             }
         }
     }
@@ -47,25 +56,23 @@
 
 - (void)_setupUI
 {
-    UITableView * tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [self.view addSubview:tableView];
-}
-
-#pragma mark - UITableViewDelegate / UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    self.tableViewHelper = [SYMainTableViewHelper initialize];
+    self.tableViewHelper.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - kTabBarHeight);
     
-    return cell;
+    [self.view addSubview:self.tableViewHelper.tableView];
+}
+
+- (void)_loadData
+{
+    [SYProgressHUD showProgressWithMsg:@"加载中..."];
+    [self.tableViewHelper loadDataWithCompletionHandler:^(id  _Nonnull result, NSError * _Nonnull error) {
+        if (!error)
+        {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SYProgressHUD hidden];
+            });
+        }
+    }];
 }
 
 @end

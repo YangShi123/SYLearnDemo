@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^NetworkCompletionHandler)(id result, NSError * error);
+
 @interface SYSuperViewController : UIViewController
 
 - (void)_config;
