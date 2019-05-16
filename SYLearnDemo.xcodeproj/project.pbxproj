@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6EBF4AE84D55684511091403 /* libPods-SYLearnDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */; };
+		80622D85228D37820035ED3A /* SYCycleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D84228D37820035ED3A /* SYCycleViewHelper.m */; };
+		80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */; };
 		8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */; };
 		8075A80A228BB22500B43693 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A808228BB22500B43693 /* UIView+Extension.m */; };
 		8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A80D228BC0E900B43693 /* SYExchangeViewController.m */; };
@@ -29,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLearnDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80622D83228D37820035ED3A /* SYCycleViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCycleViewHelper.h; sourceTree = "<group>"; };
+		80622D84228D37820035ED3A /* SYCycleViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCycleViewHelper.m; sourceTree = "<group>"; };
+		80622D89228D3ACD0035ED3A /* SYCycleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCycleCollectionViewCell.h; sourceTree = "<group>"; };
+		80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCycleCollectionViewCell.m; sourceTree = "<group>"; };
 		8075A805228BB19800B43693 /* UIViewController+SYNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SYNavigationBar.h"; sourceTree = "<group>"; };
 		8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SYNavigationBar.m"; sourceTree = "<group>"; };
 		8075A808228BB22500B43693 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 			children = (
 				8075A818228BC2E300B43693 /* SYMainTableViewCell.h */,
 				8075A819228BC2E300B43693 /* SYMainTableViewCell.m */,
+				80622D89228D3ACD0035ED3A /* SYCycleCollectionViewCell.h */,
+				80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -120,6 +128,8 @@
 			children = (
 				8075A815228BC2D000B43693 /* SYMainTableViewHelper.h */,
 				8075A816228BC2D000B43693 /* SYMainTableViewHelper.m */,
+				80622D83228D37820035ED3A /* SYCycleViewHelper.h */,
+				80622D84228D37820035ED3A /* SYCycleViewHelper.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -345,9 +355,11 @@
 				8075A81A228BC2E300B43693 /* SYMainTableViewCell.m in Sources */,
 				8075A814228BC2BA00B43693 /* SYMainModel.m in Sources */,
 				8075A823228C07A200B43693 /* SYProgressHUD.m in Sources */,
+				80622D85228D37820035ED3A /* SYCycleViewHelper.m in Sources */,
 				831488D12285B1E200C0555D /* SYMineViewController.m in Sources */,
 				8075A817228BC2D000B43693 /* SYMainTableViewHelper.m in Sources */,
 				831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */,
+				80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */,
 				8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */,
 				80D1F39C228570A300E2755D /* main.m in Sources */,
 				80CFACD12289675900DF7C09 /* SYSuperViewController.m in Sources */,
@@ -496,6 +508,7 @@
 			baseConfigurationReference = C1647DD13385CB0F822EB974 /* Pods-SYLearnDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84JYD9X959;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -517,6 +530,7 @@
 			baseConfigurationReference = 912BDDE1809C542088E2A6EB /* Pods-SYLearnDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84JYD9X959;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

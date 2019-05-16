@@ -27,16 +27,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    [self.navigationController setNavigationBarHidden:YES animated:animated];
-    [self setNaviAlpha:0];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+//    [self setNaviAlpha:0];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self setNaviAlpha:1];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+//    [self setNaviAlpha:1];
 }
-
+#warning 只是透明度变了，实际并没有隐藏
 - (void)setNaviAlpha:(CGFloat)alpha
 {
     for (UIView * view in self.navigationController.navigationBar.subviews)
@@ -68,9 +69,7 @@
     [self.tableViewHelper loadDataWithCompletionHandler:^(id  _Nonnull result, NSError * _Nonnull error) {
         if (!error)
         {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [SYProgressHUD hidden];
-            });
+            [SYProgressHUD hidden];
         }
     }];
 }

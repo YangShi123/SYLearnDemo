@@ -9,13 +9,15 @@
 #import "SYMainTableViewHelper.h"
 #import "SYMainTableViewCell.h"
 #import "SYMainModel.h"
-#import <TYCyclePagerView.h>
+#import "SYCycleViewHelper.h"
 
 @interface SYMainTableViewHelper ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView * tableView;
 
 @property (nonatomic, copy) NSArray <SYMainModel *> * dataSource;
+
+@property (nonatomic, strong) SYCycleViewHelper * cycleViewHelp;
 
 @end
 
@@ -35,6 +37,9 @@
         self.tableView.dataSource = self;
         [self.tableView registerClass:[SYMainTableViewCell class] forCellReuseIdentifier:@"cell"];
         self.tableView.tableFooterView = [UIView new];
+        self.cycleViewHelp = [SYCycleViewHelper initialize];
+        self.cycleViewHelp.cycleView.frame = CGRectMake(0, 0, kScreenWidth, 100);
+        self.tableView.tableHeaderView = self.cycleViewHelp.cycleView;
     }
     return self;
 }
@@ -55,8 +60,21 @@
 
 - (void)loadDataWithCompletionHandler:(NetworkCompletionHandler)handler
 {
-    NSError * error;
-    !handler ?: handler(@{}, error);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self reloadTableViewWithData:@{
+                                        @"images":@[@"1", @"2", @"3"],
+                                        @"datas":@[]
+                                        }];
+        NSError * error;
+        !handler ?: handler(@{}, error);
+    });
+}
+
+- (void)reloadTableViewWithData:(NSDictionary *)data
+{
+    self.cycleViewHelp.datas = data[@"images"];
+    [self.tableView reloadData];
+    [self.cycleViewHelp.cycleView reloadData];
 }
 
 @end
