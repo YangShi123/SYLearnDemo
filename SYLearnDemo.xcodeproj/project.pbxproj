@@ -11,6 +11,8 @@
 		80622D85228D37820035ED3A /* SYCycleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D84228D37820035ED3A /* SYCycleViewHelper.m */; };
 		80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */; };
 		806A5B4D228EA6D3001F961F /* launchAd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A5B4C228EA6D3001F961F /* launchAd.jpg */; };
+		806A5B51228EAAA2001F961F /* mainData.json in Resources */ = {isa = PBXBuildFile; fileRef = 806A5B50228EAAA2001F961F /* mainData.json */; };
+		806A5B56228EABF5001F961F /* SYApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 806A5B55228EABF5001F961F /* SYApiManager.m */; };
 		8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */; };
 		8075A80A228BB22500B43693 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A808228BB22500B43693 /* UIView+Extension.m */; };
 		8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A80D228BC0E900B43693 /* SYExchangeViewController.m */; };
@@ -37,6 +39,9 @@
 		80622D89228D3ACD0035ED3A /* SYCycleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCycleCollectionViewCell.h; sourceTree = "<group>"; };
 		80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCycleCollectionViewCell.m; sourceTree = "<group>"; };
 		806A5B4C228EA6D3001F961F /* launchAd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchAd.jpg; sourceTree = "<group>"; };
+		806A5B50228EAAA2001F961F /* mainData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mainData.json; sourceTree = "<group>"; };
+		806A5B54228EABF5001F961F /* SYApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYApiManager.h; sourceTree = "<group>"; };
+		806A5B55228EABF5001F961F /* SYApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYApiManager.m; sourceTree = "<group>"; };
 		8075A805228BB19800B43693 /* UIViewController+SYNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SYNavigationBar.h"; sourceTree = "<group>"; };
 		8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SYNavigationBar.m"; sourceTree = "<group>"; };
 		8075A808228BB22500B43693 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
@@ -96,6 +101,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		806A5B53228EAB67001F961F /* SYAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				806A5B54228EABF5001F961F /* SYApiManager.h */,
+				806A5B55228EABF5001F961F /* SYApiManager.m */,
+			);
+			path = SYAPIManager;
+			sourceTree = "<group>";
+		};
 		8075A80B228BC0BE00B43693 /* 交流 */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +124,7 @@
 			children = (
 				8075A812228BC2BA00B43693 /* SYMainModel.h */,
 				8075A813228BC2BA00B43693 /* SYMainModel.m */,
+				806A5B50228EAAA2001F961F /* mainData.json */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -182,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				831488C52285AEF000C0555D /* Launch */,
+				806A5B53228EAB67001F961F /* SYAPIManager */,
 				831488C72285AF6200C0555D /* 首页 */,
 				8075A80B228BC0BE00B43693 /* 交流 */,
 				831488C82285AF7400C0555D /* 我的 */,
@@ -299,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				806A5B51228EAAA2001F961F /* mainData.json in Resources */,
 				80D1F399228570A300E2755D /* LaunchScreen.storyboard in Resources */,
 				80D1F396228570A300E2755D /* Assets.xcassets in Resources */,
 				80D1F394228570A200E2755D /* Main.storyboard in Resources */,
@@ -368,6 +385,7 @@
 				80D1F39C228570A300E2755D /* main.m in Sources */,
 				80CFACD12289675900DF7C09 /* SYSuperViewController.m in Sources */,
 				80D1F38E228570A200E2755D /* AppDelegate.m in Sources */,
+				806A5B56228EABF5001F961F /* SYApiManager.m in Sources */,
 				8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */,
 				831488CB2285B05100C0555D /* SYTabBarController.m in Sources */,
 			);

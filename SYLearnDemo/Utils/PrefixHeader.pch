@@ -19,6 +19,8 @@
 #import "UIViewController+SYNavigationBar.h"
 #import "UIView+Extension.h"
 #import "SYProgressHUD.h"
+#import "SYApiManager.h"
+#import <Masonry.h>
 
 
 #endif

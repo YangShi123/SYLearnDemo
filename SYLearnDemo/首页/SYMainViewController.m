@@ -66,8 +66,8 @@
 - (void)_loadData
 {
     [SYProgressHUD showProgressWithMsg:@"加载中..."];
-    [self.tableViewHelper loadDataWithCompletionHandler:^(id  _Nonnull result, NSError * _Nonnull error) {
-        if (!error)
+    [self.tableViewHelper loadDataWithCompletionHandler:^(SYApiResponse * _Nonnull response) {
+        if (response.success)
         {
             [SYProgressHUD hidden];
         }

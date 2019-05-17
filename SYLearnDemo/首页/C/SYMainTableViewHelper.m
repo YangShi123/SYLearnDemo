@@ -60,14 +60,17 @@
 
 - (void)loadDataWithCompletionHandler:(NetworkCompletionHandler)handler
 {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self reloadTableViewWithData:@{
-                                        @"images":@[@"1", @"2", @"3"],
-                                        @"datas":@[]
-                                        }];
-        NSError * error;
-        !handler ?: handler(@{}, error);
-    });
+    [SYApiManager getMainWithHandler:^(SYApiResponse * _Nonnull response) {
+        if (response.success)
+        {
+            [self reloadTableViewWithData:response.resultValue];
+        }
+        else
+        {
+            //do ...
+        }
+        handler(response);
+    }];
 }
 
 - (void)reloadTableViewWithData:(NSDictionary *)data

@@ -1,0 +1,8 @@
+{
+    "code":200,
+    "msg":"success",
+    "data":{
+        "images":["1", "2", "3"],
+        "contents":[]
+    }
+}
