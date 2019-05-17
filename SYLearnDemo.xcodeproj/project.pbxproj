@@ -10,6 +10,7 @@
 		6EBF4AE84D55684511091403 /* libPods-SYLearnDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */; };
 		80622D85228D37820035ED3A /* SYCycleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D84228D37820035ED3A /* SYCycleViewHelper.m */; };
 		80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */; };
+		806A5B4D228EA6D3001F961F /* launchAd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A5B4C228EA6D3001F961F /* launchAd.jpg */; };
 		8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */; };
 		8075A80A228BB22500B43693 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A808228BB22500B43693 /* UIView+Extension.m */; };
 		8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A80D228BC0E900B43693 /* SYExchangeViewController.m */; };
@@ -35,6 +36,7 @@
 		80622D84228D37820035ED3A /* SYCycleViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCycleViewHelper.m; sourceTree = "<group>"; };
 		80622D89228D3ACD0035ED3A /* SYCycleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCycleCollectionViewCell.h; sourceTree = "<group>"; };
 		80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCycleCollectionViewCell.m; sourceTree = "<group>"; };
+		806A5B4C228EA6D3001F961F /* launchAd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchAd.jpg; sourceTree = "<group>"; };
 		8075A805228BB19800B43693 /* UIViewController+SYNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SYNavigationBar.h"; sourceTree = "<group>"; };
 		8075A806228BB19900B43693 /* UIViewController+SYNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SYNavigationBar.m"; sourceTree = "<group>"; };
 		8075A808228BB22500B43693 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		831488C52285AEF000C0555D /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				806A5B4C228EA6D3001F961F /* launchAd.jpg */,
 				80D1F38C228570A200E2755D /* AppDelegate.h */,
 				80D1F38D228570A200E2755D /* AppDelegate.m */,
 				831488C92285B05100C0555D /* SYTabBarController.h */,
@@ -299,6 +302,7 @@
 				80D1F399228570A300E2755D /* LaunchScreen.storyboard in Resources */,
 				80D1F396228570A300E2755D /* Assets.xcassets in Resources */,
 				80D1F394228570A200E2755D /* Main.storyboard in Resources */,
+				806A5B4D228EA6D3001F961F /* launchAd.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SYTabBarController.h"
+#import <XHLaunchAd.h>
+#import <XHLaunchAdImageManager.h>
 
 @interface AppDelegate ()
 
@@ -19,8 +21,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     SYTabBarController * tabBarController = [[SYTabBarController alloc] init];
     self.window.rootViewController = tabBarController;
+    [self _configLaunchAD];
     [self.window makeKeyAndVisible];
     
     //适配iOS11
@@ -33,6 +37,32 @@
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     
     return YES;
+}
+
+- (void)_configLaunchAD
+{
+    //配置广告数据
+    XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration new];
+    //广告停留时间
+    imageAdconfiguration.duration = 3;
+    //广告frame
+    imageAdconfiguration.frame = self.window.bounds;
+    //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)(不支持assets.xcassets)
+    imageAdconfiguration.imageNameOrURLString = @"launchAd.jpg";
+    //图片填充模式
+    imageAdconfiguration.contentMode = UIViewContentModeScaleToFill;
+    //广告点击打开链接
+//    imageAdconfiguration.openURLString = @"http://www.it7090.com";
+    //广告显示完成动画
+    imageAdconfiguration.showFinishAnimate = ShowFinishAnimateLite;
+    //广告显示完成动画时间
+    imageAdconfiguration.showFinishAnimateTime = 0.8;
+    //跳过按钮类型
+    imageAdconfiguration.skipButtonType = SkipTypeTimeText;
+    //后台返回时,是否显示广告
+    imageAdconfiguration.showEnterForeground = YES;
+    //显示开屏广告
+    [XHLaunchAd imageAdWithImageAdConfiguration:imageAdconfiguration delegate:self];
 }
 
 

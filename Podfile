@@ -16,5 +16,6 @@ pod 'JXCategoryView'
 pod 'FDFullscreenPopGesture'
 pod 'TYCyclePagerView'
 pod 'MBProgressHUD'
+pod 'XHLaunchAd'
 
 end

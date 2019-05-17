@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - FDFullscreenPopGesture (1.1)
+  - FLAnimatedImage (1.0.12)
   - IQKeyboardManager (6.3.0)
   - JXCategoryView (1.3.4)
   - Masonry (1.1.0)
@@ -24,6 +25,8 @@ PODS:
     - SDWebImage/Core (= 5.0.2)
   - SDWebImage/Core (5.0.2)
   - TYCyclePagerView (1.2.0)
+  - XHLaunchAd (3.9.8):
+    - FLAnimatedImage (~> 1.0.12)
 
 DEPENDENCIES:
   - AFNetworking
@@ -35,11 +38,13 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage
   - TYCyclePagerView
+  - XHLaunchAd
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - FDFullscreenPopGesture
+    - FLAnimatedImage
     - IQKeyboardManager
     - JXCategoryView
     - Masonry
@@ -47,10 +52,12 @@ SPEC REPOS:
     - MJRefresh
     - SDWebImage
     - TYCyclePagerView
+    - XHLaunchAd
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
   JXCategoryView: 72560616347270d34c2e717cc08030e6218d7eda
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -58,7 +65,8 @@ SPEC CHECKSUMS:
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
+  XHLaunchAd: 45048592af01aa501c9d2d0c45e95ca74c4d0596
 
-PODFILE CHECKSUM: 5b57c0d1e2fa783a2c17cf804b4119341a6ba570
+PODFILE CHECKSUM: e1684d1acc61852a2f63c0a06eed8963d79229be
 
 COCOAPODS: 1.5.3
