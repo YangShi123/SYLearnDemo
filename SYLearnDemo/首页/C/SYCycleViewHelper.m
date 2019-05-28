@@ -14,8 +14,6 @@
 
 @property (nonatomic, strong) TYCyclePagerView * cycleView;
 
-
-
 @end
 
 @implementation SYCycleViewHelper

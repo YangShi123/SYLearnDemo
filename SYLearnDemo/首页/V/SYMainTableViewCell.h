@@ -12,6 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SYMainTableViewCell : UITableViewCell
 
+- (void)setName:(NSString *)name;
+
+- (void)setTitle:(NSString *)title;
+
+- (void)setContentTitle:(NSString *)contentTitle;
+
+- (void)setAuthorText:(NSString *)text;
+
+- (void)setReadText:(NSString *)text;
+
+- (void)setLikeBtnText:(NSString *)text;
+
+- (void)setIsLike:(BOOL)isLike;
+
 @end
 
 NS_ASSUME_NONNULL_END

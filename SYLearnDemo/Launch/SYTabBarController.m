@@ -10,6 +10,7 @@
 #import "SYMainViewController.h"
 #import "SYExchangeViewController.h"
 #import "SYMineViewController.h"
+#import "SYNavigationController.h"
 
 @interface SYTabBarController ()
 
@@ -30,7 +31,7 @@
 
 - (void)configTabBarWithViewController:(UIViewController *)viewController title:(NSString *)title
 {
-    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:viewController];
+    SYNavigationController * navi = [[SYNavigationController alloc] initWithRootViewController:viewController];
     navi.tabBarItem.title = title;
     navi.navigationBar.barTintColor = COLOR_1296db;
     [navi.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:COLOR_2c2c2c} forState:UIControlStateNormal];

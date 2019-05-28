@@ -10,4 +10,16 @@
 
 @implementation SYMainModel
 
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
+    self.name = [[dic objectForKey:@"author"] substringToIndex:1];
+    self.title = [dic objectForKey:@"title"];
+    self.content = [dic objectForKey:@"content"];
+    self.author = [dic objectForKey:@"author"];
+    self.readCount = [dic objectForKey:@"readCount"];
+    self.likeCount = [dic objectForKey:@"likeCount"];
+    self.isLike = [[dic objectForKey:@"like"] integerValue];
+    return self;
+}
+
 @end

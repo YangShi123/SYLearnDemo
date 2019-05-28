@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)loadDataWithCompletionHandler:(NetworkCompletionHandler)handler;
 
+@property (nonatomic, copy) void(^tableViewHandler)(NSIndexPath * indexPath);
+
 @end
 
 NS_ASSUME_NONNULL_END

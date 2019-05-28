@@ -24,7 +24,7 @@ typedef void(^NetworkCompletionHandler)(SYApiResponse * response);
 
 @interface SYApiManager : NSObject
 
-+ (void)getMainWithHandler:(NetworkCompletionHandler)handler;
++ (void)getDataWithJsonName:(NSString *)name handler:(NetworkCompletionHandler)handler;
 
 @end
 

@@ -12,6 +12,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SYMainModel : NSObject
 
+- (instancetype)initWithDic:(NSDictionary *)dic;
+
+@property (nonatomic, copy) NSString * name;
+
+@property (nonatomic, copy) NSString * title;
+
+@property (nonatomic, copy) NSString * content;
+
+@property (nonatomic, copy) NSString * author;
+
+@property (nonatomic, copy) NSString * readCount;
+
+@property (nonatomic, copy) NSString * likeCount;
+
+@property (nonatomic, assign) NSInteger isLike;
+
 @end
 
 NS_ASSUME_NONNULL_END

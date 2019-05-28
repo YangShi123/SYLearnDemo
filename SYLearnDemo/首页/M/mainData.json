@@ -3,6 +3,11 @@
     "msg":"success",
     "data":{
         "images":["1", "2", "3"],
-        "contents":[]
+        "contents":[{"title":"MVC设计模式", "content":"M是指业务数据, V是指用户界面, C则是控制器", "author":"石阳", "readCount":"2", "likeCount":"1", "like":1},
+                    {"title":"导航栏下拉透明上拉变色", "content":"这是一个副标题1", "author":"石阳", "readCount":"3", "likeCount":"1", "like":1},
+                    {"title":"这是一个标题2", "content":"这是一个副标题2", "author":"石阳", "readCount":"4", "likeCount":"0", "like":0},
+                    {"title":"这是一个标题3", "content":"这是一个副标题3", "author":"石阳", "readCount":"5", "likeCount":"3", "like":1},
+                    {"title":"这是一个标题4", "content":"这是一个副标题4", "author":"石阳", "readCount":"6", "likeCount":"0", "like":0}
+        ]
     }
 }

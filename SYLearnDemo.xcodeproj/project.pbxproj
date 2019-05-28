@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6EBF4AE84D55684511091403 /* libPods-SYLearnDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */; };
+		8026DB13229691BE0010F6DB /* SYMVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8026DB12229691BE0010F6DB /* SYMVCViewController.m */; };
+		8026DB16229693CC0010F6DB /* SYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8026DB15229693CC0010F6DB /* SYNavigationController.m */; };
+		804FAAC222979ACE00E52631 /* SYMVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 804FAAC122979ACE00E52631 /* SYMVCModel.m */; };
+		804FAAC422979AE500E52631 /* mvcData.json in Resources */ = {isa = PBXBuildFile; fileRef = 804FAAC322979AE500E52631 /* mvcData.json */; };
+		804FAAC722979F8800E52631 /* SYTextViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 804FAAC622979F8800E52631 /* SYTextViewHelper.m */; };
 		80622D85228D37820035ED3A /* SYCycleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D84228D37820035ED3A /* SYCycleViewHelper.m */; };
 		80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */; };
 		806A5B4D228EA6D3001F961F /* launchAd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 806A5B4C228EA6D3001F961F /* launchAd.jpg */; };
@@ -20,6 +25,8 @@
 		8075A817228BC2D000B43693 /* SYMainTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A816228BC2D000B43693 /* SYMainTableViewHelper.m */; };
 		8075A81A228BC2E300B43693 /* SYMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A819228BC2E300B43693 /* SYMainTableViewCell.m */; };
 		8075A823228C07A200B43693 /* SYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8075A822228C07A200B43693 /* SYProgressHUD.m */; };
+		80C22E2B229CD7E5009435A5 /* SYNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C22E2A229CD7E5009435A5 /* SYNaviViewController.m */; };
+		80C22E2E229D09FC009435A5 /* UINavigationController+SYNaviAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C22E2D229D09FC009435A5 /* UINavigationController+SYNaviAlpha.m */; };
 		80CFACD12289675900DF7C09 /* SYSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CFACD02289675900DF7C09 /* SYSuperViewController.m */; };
 		80D1F38E228570A200E2755D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F38D228570A200E2755D /* AppDelegate.m */; };
 		80D1F391228570A200E2755D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F390228570A200E2755D /* ViewController.m */; };
@@ -34,6 +41,15 @@
 
 /* Begin PBXFileReference section */
 		794BA402D466EB3A05C57660 /* libPods-SYLearnDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYLearnDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8026DB11229691BE0010F6DB /* SYMVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMVCViewController.h; sourceTree = "<group>"; };
+		8026DB12229691BE0010F6DB /* SYMVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMVCViewController.m; sourceTree = "<group>"; };
+		8026DB14229693CC0010F6DB /* SYNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYNavigationController.h; sourceTree = "<group>"; };
+		8026DB15229693CC0010F6DB /* SYNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYNavigationController.m; sourceTree = "<group>"; };
+		804FAAC022979ACE00E52631 /* SYMVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMVCModel.h; sourceTree = "<group>"; };
+		804FAAC122979ACE00E52631 /* SYMVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMVCModel.m; sourceTree = "<group>"; };
+		804FAAC322979AE500E52631 /* mvcData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mvcData.json; sourceTree = "<group>"; };
+		804FAAC522979F8800E52631 /* SYTextViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYTextViewHelper.h; sourceTree = "<group>"; };
+		804FAAC622979F8800E52631 /* SYTextViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYTextViewHelper.m; sourceTree = "<group>"; };
 		80622D83228D37820035ED3A /* SYCycleViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCycleViewHelper.h; sourceTree = "<group>"; };
 		80622D84228D37820035ED3A /* SYCycleViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYCycleViewHelper.m; sourceTree = "<group>"; };
 		80622D89228D3ACD0035ED3A /* SYCycleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYCycleCollectionViewCell.h; sourceTree = "<group>"; };
@@ -56,6 +72,10 @@
 		8075A819228BC2E300B43693 /* SYMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainTableViewCell.m; sourceTree = "<group>"; };
 		8075A821228C07A200B43693 /* SYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressHUD.h; sourceTree = "<group>"; };
 		8075A822228C07A200B43693 /* SYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressHUD.m; sourceTree = "<group>"; };
+		80C22E29229CD7E5009435A5 /* SYNaviViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYNaviViewController.h; sourceTree = "<group>"; };
+		80C22E2A229CD7E5009435A5 /* SYNaviViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYNaviViewController.m; sourceTree = "<group>"; };
+		80C22E2C229D09FC009435A5 /* UINavigationController+SYNaviAlpha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SYNaviAlpha.h"; sourceTree = "<group>"; };
+		80C22E2D229D09FC009435A5 /* UINavigationController+SYNaviAlpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SYNaviAlpha.m"; sourceTree = "<group>"; };
 		80CFACCF2289675900DF7C09 /* SYSuperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYSuperViewController.h; sourceTree = "<group>"; };
 		80CFACD02289675900DF7C09 /* SYSuperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYSuperViewController.m; sourceTree = "<group>"; };
 		80CFACD3228967F900DF7C09 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
@@ -125,6 +145,9 @@
 				8075A812228BC2BA00B43693 /* SYMainModel.h */,
 				8075A813228BC2BA00B43693 /* SYMainModel.m */,
 				806A5B50228EAAA2001F961F /* mainData.json */,
+				804FAAC022979ACE00E52631 /* SYMVCModel.h */,
+				804FAAC122979ACE00E52631 /* SYMVCModel.m */,
+				804FAAC322979AE500E52631 /* mvcData.json */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -147,6 +170,8 @@
 				8075A816228BC2D000B43693 /* SYMainTableViewHelper.m */,
 				80622D83228D37820035ED3A /* SYCycleViewHelper.h */,
 				80622D84228D37820035ED3A /* SYCycleViewHelper.m */,
+				804FAAC522979F8800E52631 /* SYTextViewHelper.h */,
+				804FAAC622979F8800E52631 /* SYTextViewHelper.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -222,6 +247,10 @@
 				80D1F38D228570A200E2755D /* AppDelegate.m */,
 				831488C92285B05100C0555D /* SYTabBarController.h */,
 				831488CA2285B05100C0555D /* SYTabBarController.m */,
+				8026DB14229693CC0010F6DB /* SYNavigationController.h */,
+				8026DB15229693CC0010F6DB /* SYNavigationController.m */,
+				80C22E2C229D09FC009435A5 /* UINavigationController+SYNaviAlpha.h */,
+				80C22E2D229D09FC009435A5 /* UINavigationController+SYNaviAlpha.m */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -231,6 +260,10 @@
 			children = (
 				831488CC2285B1D500C0555D /* SYMainViewController.h */,
 				831488CD2285B1D500C0555D /* SYMainViewController.m */,
+				8026DB11229691BE0010F6DB /* SYMVCViewController.h */,
+				8026DB12229691BE0010F6DB /* SYMVCViewController.m */,
+				80C22E29229CD7E5009435A5 /* SYNaviViewController.h */,
+				80C22E2A229CD7E5009435A5 /* SYNaviViewController.m */,
 				8075A80F228BC26A00B43693 /* M */,
 				8075A810228BC27F00B43693 /* V */,
 				8075A811228BC29500B43693 /* C */,
@@ -315,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804FAAC422979AE500E52631 /* mvcData.json in Resources */,
 				806A5B51228EAAA2001F961F /* mainData.json in Resources */,
 				80D1F399228570A300E2755D /* LaunchScreen.storyboard in Resources */,
 				80D1F396228570A300E2755D /* Assets.xcassets in Resources */,
@@ -377,14 +411,20 @@
 				8075A814228BC2BA00B43693 /* SYMainModel.m in Sources */,
 				8075A823228C07A200B43693 /* SYProgressHUD.m in Sources */,
 				80622D85228D37820035ED3A /* SYCycleViewHelper.m in Sources */,
+				80C22E2B229CD7E5009435A5 /* SYNaviViewController.m in Sources */,
+				804FAAC222979ACE00E52631 /* SYMVCModel.m in Sources */,
+				8026DB16229693CC0010F6DB /* SYNavigationController.m in Sources */,
 				831488D12285B1E200C0555D /* SYMineViewController.m in Sources */,
 				8075A817228BC2D000B43693 /* SYMainTableViewHelper.m in Sources */,
 				831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */,
 				80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */,
 				8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */,
+				8026DB13229691BE0010F6DB /* SYMVCViewController.m in Sources */,
+				804FAAC722979F8800E52631 /* SYTextViewHelper.m in Sources */,
 				80D1F39C228570A300E2755D /* main.m in Sources */,
 				80CFACD12289675900DF7C09 /* SYSuperViewController.m in Sources */,
 				80D1F38E228570A200E2755D /* AppDelegate.m in Sources */,
+				80C22E2E229D09FC009435A5 /* UINavigationController+SYNaviAlpha.m in Sources */,
 				806A5B56228EABF5001F961F /* SYApiManager.m in Sources */,
 				8075A80E228BC0E900B43693 /* SYExchangeViewController.m in Sources */,
 				831488CB2285B05100C0555D /* SYTabBarController.m in Sources */,

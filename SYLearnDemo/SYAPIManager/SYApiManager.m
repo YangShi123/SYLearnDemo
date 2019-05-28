@@ -10,20 +10,14 @@
 
 @implementation SYApiManager
 
-+ (void)getMainWithHandler:(NetworkCompletionHandler)handler
-{
-    [[[SYApiManager alloc] init] getStartWithHandler:handler];
-}
-
-
-#pragma mark - 公共方法
-
-- (void)getStartWithHandler:(NetworkCompletionHandler)handler
++ (void)getDataWithJsonName:(NSString *)name handler:(NetworkCompletionHandler)handler
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        !handler ?: handler([[[SYApiManager alloc] init] jsonObjectDataFromBundleWithSourceName:@"mainData"]);
+        !handler ?: handler([[[SYApiManager alloc] init] jsonObjectDataFromBundleWithSourceName:name]);
     });
 }
+
+#pragma mark - 公共方法
 
 - (SYApiResponse *)jsonObjectDataFromBundleWithSourceName:(NSString *)name
 {

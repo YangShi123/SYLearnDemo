@@ -34,8 +34,6 @@
         
     }
     
-    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-    
     return YES;
 }
 
@@ -44,7 +42,7 @@
     //配置广告数据
     XHLaunchImageAdConfiguration *imageAdconfiguration = [XHLaunchImageAdConfiguration new];
     //广告停留时间
-    imageAdconfiguration.duration = 3;
+    imageAdconfiguration.duration = 2;
     //广告frame
     imageAdconfiguration.frame = self.window.bounds;
     //广告图片URLString/或本地图片名(.jpg/.gif请带上后缀)(不支持assets.xcassets)

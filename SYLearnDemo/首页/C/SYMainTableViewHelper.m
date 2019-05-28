@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) UITableView * tableView;
 
-@property (nonatomic, copy) NSArray <SYMainModel *> * dataSource;
+@property (nonatomic, strong) NSMutableArray <SYMainModel *> * dataSource;
 
 @property (nonatomic, strong) SYCycleViewHelper * cycleViewHelp;
 
@@ -46,21 +46,40 @@
 
 #pragma mark - UITableViewDelegate / UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 20;
+    return 100;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataSource.count;
+}
+ 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SYMainTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    SYMainModel * model = self.dataSource[indexPath.row];
+    cell.name = model.name;
+    cell.title = model.title;
+    cell.contentTitle = model.content;
+    cell.authorText = [NSString stringWithFormat:@"作者:%@", model.author];
+    cell.readText = [NSString stringWithFormat:@"阅读:%@", model.readCount];
+    cell.likeBtnText = model.likeCount;
+    cell.isLike = model.isLike;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    !self.tableViewHandler ?: self.tableViewHandler(indexPath);
 }
 
 - (void)loadDataWithCompletionHandler:(NetworkCompletionHandler)handler
 {
-    [SYApiManager getMainWithHandler:^(SYApiResponse * _Nonnull response) {
+    [SYApiManager getDataWithJsonName:@"mainData" handler:^(SYApiResponse * _Nonnull response) {
         if (response.success)
         {
             [self reloadTableViewWithData:response.resultValue];
@@ -76,8 +95,22 @@
 - (void)reloadTableViewWithData:(NSDictionary *)data
 {
     self.cycleViewHelp.datas = data[@"images"];
+    for (NSDictionary * dic in data[@"contents"])
+    {
+        SYMainModel * model = [[SYMainModel alloc] initWithDic:dic];
+        [self.dataSource addObject:model];
+    }
     [self.tableView reloadData];
     [self.cycleViewHelp.cycleView reloadData];
+}
+
+- (NSMutableArray<SYMainModel *> *)dataSource
+{
+    if (!_dataSource)
+    {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
 }
 
 @end

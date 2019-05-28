@@ -8,6 +8,8 @@
 
 #import "SYMainViewController.h"
 #import "SYMainTableViewHelper.h"
+#import "SYMVCViewController.h"
+#import "SYNaviViewController.h"
 
 @interface SYMainViewController ()
 
@@ -19,8 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self _setupUI];
+    [self _config];
     [self _loadData];
 }
 
@@ -28,31 +30,12 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-//    [self setNaviAlpha:0];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-//    [self setNaviAlpha:1];
-}
-#warning 只是透明度变了，实际并没有隐藏
-- (void)setNaviAlpha:(CGFloat)alpha
-{
-    for (UIView * view in self.navigationController.navigationBar.subviews)
-    {
-        if ([view isKindOfClass:NSClassFromString(@"_UIBarBackground")])
-        {
-            for (UIView * subView in view.subviews)
-            {
-                if ([subView isKindOfClass:NSClassFromString(@"UIVisualEffectView")])
-                {
-                    subView.alpha = alpha;
-                }
-            }
-        }
-    }
 }
 
 - (void)_setupUI
@@ -72,6 +55,32 @@
             [SYProgressHUD hidden];
         }
     }];
+}
+
+- (void)_config
+{
+    SYWeakSelf(self);
+    self.tableViewHelper.tableViewHandler = ^(NSIndexPath * _Nonnull indexPath) {
+        switch (indexPath.row)
+        {
+            case 0://mvc
+            {
+                SYMVCViewController * vc = [[SYMVCViewController alloc] init];
+                vc.title = @"MVC设计模式";
+                [weakself.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+            case 1://navi
+            {
+                SYNaviViewController * vc = [[SYNaviViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
+            }
+                break;
+                
+            default:
+                break;
+        }
+    };
 }
 
 @end
