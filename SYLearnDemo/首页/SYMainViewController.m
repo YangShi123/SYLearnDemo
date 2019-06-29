@@ -10,6 +10,7 @@
 #import "SYMainTableViewHelper.h"
 #import "SYMVCViewController.h"
 #import "SYNaviViewController.h"
+#import "SYLockViewController.h"
 
 @interface SYMainViewController ()
 
@@ -76,6 +77,11 @@
                 [weakself.navigationController pushViewController:vc animated:YES];
             }
                 break;
+            case 2:
+            {
+                SYLockViewController * vc = [[SYLockViewController alloc] init];
+                [weakself.navigationController pushViewController:vc animated:YES];
+            }
                 
             default:
                 break;

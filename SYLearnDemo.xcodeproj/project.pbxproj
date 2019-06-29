@@ -37,6 +37,8 @@
 		831488CB2285B05100C0555D /* SYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831488CA2285B05100C0555D /* SYTabBarController.m */; };
 		831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831488CD2285B1D500C0555D /* SYMainViewController.m */; };
 		831488D12285B1E200C0555D /* SYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831488D02285B1E200C0555D /* SYMineViewController.m */; };
+		8374984522C75F240019D534 /* SYLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8374984422C75F240019D534 /* SYLockViewController.m */; };
+		8374984822C760C60019D534 /* SYFingerLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8374984722C760C60019D534 /* SYFingerLockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,10 @@
 		831488CD2285B1D500C0555D /* SYMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMainViewController.m; sourceTree = "<group>"; };
 		831488CF2285B1E200C0555D /* SYMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYMineViewController.h; sourceTree = "<group>"; };
 		831488D02285B1E200C0555D /* SYMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYMineViewController.m; sourceTree = "<group>"; };
+		8374984322C75F240019D534 /* SYLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYLockViewController.h; sourceTree = "<group>"; };
+		8374984422C75F240019D534 /* SYLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYLockViewController.m; sourceTree = "<group>"; };
+		8374984622C760C60019D534 /* SYFingerLockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYFingerLockView.h; sourceTree = "<group>"; };
+		8374984722C760C60019D534 /* SYFingerLockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYFingerLockView.m; sourceTree = "<group>"; };
 		912BDDE1809C542088E2A6EB /* Pods-SYLearnDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLearnDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C1647DD13385CB0F822EB974 /* Pods-SYLearnDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYLearnDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +165,8 @@
 				8075A819228BC2E300B43693 /* SYMainTableViewCell.m */,
 				80622D89228D3ACD0035ED3A /* SYCycleCollectionViewCell.h */,
 				80622D8A228D3ACD0035ED3A /* SYCycleCollectionViewCell.m */,
+				8374984622C760C60019D534 /* SYFingerLockView.h */,
+				8374984722C760C60019D534 /* SYFingerLockView.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -264,6 +272,8 @@
 				8026DB12229691BE0010F6DB /* SYMVCViewController.m */,
 				80C22E29229CD7E5009435A5 /* SYNaviViewController.h */,
 				80C22E2A229CD7E5009435A5 /* SYNaviViewController.m */,
+				8374984322C75F240019D534 /* SYLockViewController.h */,
+				8374984422C75F240019D534 /* SYLockViewController.m */,
 				8075A80F228BC26A00B43693 /* M */,
 				8075A810228BC27F00B43693 /* V */,
 				8075A811228BC29500B43693 /* C */,
@@ -383,19 +393,10 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SYLearnDemo/Pods-SYLearnDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,10 +415,12 @@
 				80C22E2B229CD7E5009435A5 /* SYNaviViewController.m in Sources */,
 				804FAAC222979ACE00E52631 /* SYMVCModel.m in Sources */,
 				8026DB16229693CC0010F6DB /* SYNavigationController.m in Sources */,
+				8374984822C760C60019D534 /* SYFingerLockView.m in Sources */,
 				831488D12285B1E200C0555D /* SYMineViewController.m in Sources */,
 				8075A817228BC2D000B43693 /* SYMainTableViewHelper.m in Sources */,
 				831488CE2285B1D500C0555D /* SYMainViewController.m in Sources */,
 				80622D8B228D3ACD0035ED3A /* SYCycleCollectionViewCell.m in Sources */,
+				8374984522C75F240019D534 /* SYLockViewController.m in Sources */,
 				8075A807228BB19900B43693 /* UIViewController+SYNavigationBar.m in Sources */,
 				8026DB13229691BE0010F6DB /* SYMVCViewController.m in Sources */,
 				804FAAC722979F8800E52631 /* SYTextViewHelper.m in Sources */,
@@ -574,7 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84JYD9X959;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/wenjiepeng/Desktop/SYLearnDemo/SYLearnDemo/Utils/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/Ivan_yang/Desktop/SYLearnDemo/SYLearnDemo/Utils/PrefixHeader.pch;
 				INFOPLIST_FILE = SYLearnDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,7 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84JYD9X959;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/wenjiepeng/Desktop/SYLearnDemo/SYLearnDemo/Utils/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/Ivan_yang/Desktop/SYLearnDemo/SYLearnDemo/Utils/PrefixHeader.pch;
 				INFOPLIST_FILE = SYLearnDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
